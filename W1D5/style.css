@@ -3,22 +3,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.text {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    bottom: 0;
-    right: 150px;
-    left: 150px;
-    font-size: 10vw;
-}
+@media screen and (max-width: 900px) {
+     div.text h1{
+      right: 0;
+      left: 50px;
+      top: 300px;
+      height: 200px;
+      transform: rotate(270deg);
+    }
+  }
 
 .text h1 {
-    left: 1vw;
-    right: 1vw;
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100px;
+    left: 175px;
+    font-size: 10vw;
     color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-box {
@@ -47,6 +52,7 @@ body {
     width: 0;
     height: 60px;
     background-color: white;
+    transition: ease-in-out  0.5s;
 }
 
 .nav {
@@ -58,6 +64,7 @@ body {
     width: 50px;
     padding: 0 5px;
     background-color: black;
+    transition: ease-in-out  0.5s;
 }
 
 .nav ul {

@@ -21,39 +21,38 @@ const getNavStatus = (element, event) => {
     } else if (element === 'nav-A') {
         if (nav.offsetWidth > 60) {
             toggleNav('expand');
-        } else {}
+        }
     } else {
         if (nav.offsetWidth > 60) {
             toggleNav('collapse');
-        } else {}
+        }
     }
 }
 
 const toggleNav = (parameter) => {
     if (parameter === 'expand') {
         menuHeader.style.width = '125px';
-        menuHeader.style.transition = 'ease-in-out 0.5s';
         nav.style.width = '175px';
-        nav.style.transition = 'ease-in-out  0.5s';
         ul.style.visibility = 'visible';
-        ul.style.color = 'white';
     } else {
         menuHeader.style.width = '0';
         nav.style.width = '50px';
         ul.style.visibility = 'hidden';
-        ul.style.color = 'white';
     }
 }
 
-list.forEach((list) => {
-    list.onclick = (element) => {
-        document.body.style.backgroundColor = element.target.id;
-        document.querySelector('h1').innerHTML = element.target.id;
-        iconMenu.style.color = element.target.id;
-    };
-});
+list.forEach((item) => {
+    item.onclick = (item) => {
+        document.body.style.backgroundColor = item.target.id;
+        document.querySelector('h1').innerHTML = item.target.id;
+        iconMenu.style.color = item.target.id;
+    }
+})
 
 document.onkeypress = (element) => {
-    document.body.style.backgroundColor = colors[element.key];
-    iconMenu.style.color = colors[element.key];
-};
+    if (isNaN(element.key) === false) {
+        document.body.style.backgroundColor = colors[element.key];
+        document.querySelector('h1').innerHTML = colors[element.key];
+        iconMenu.style.color = colors[element.key];
+    }
+}
