@@ -13,6 +13,24 @@ body {
     }
   }
 
+  @media screen and (max-height: 850px) {
+    div.nav ul li {
+        height: 50px;
+    }
+ }
+
+ @media screen and (max-height: 650px) {
+    div.nav ul li {
+        height: 40px;
+    }
+ }
+
+ @media screen and (max-height: 550px) {
+    div.nav ul li {
+        height: 25px;
+    }
+ }
+
 .text h1 {
     display: flex;
     position: fixed;
