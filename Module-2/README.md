@@ -8,7 +8,7 @@
 
 Je gaat een een filmzoeker maken!
 
-In dit project ga je een overzicht maken van verschillende films. 📽️ 
+In dit project ga je een overzicht maken van verschillende films. 📽️
 Over de database hoef je je (nog) geen zorgen te maken! Die hebben wij voor je gemaakt.
 
 Er zitten een aantal films in de database die de gebruiker moet kunnen filteren dmv een aantal filterbuttons. De film naar keuze kan de gebruiker dan vervolgens vinden op [IMDB](https://www.imdb.com/). Je gaat in deze opdracht kennismaken met een grote berg data en hoe je daarmee om kunt gaan.
@@ -47,7 +47,7 @@ Aan deze eisen moet jouw project voldoen:
 # **Bonus Requirements  🚀**
 
 1. Styling en design
-2. Als gebruiker kan ik in een inputfield de titel van een film invullen, wanneer ik op enter druk worden de films gefilterd op de titel die ik heb ingevuld. 
+2. Als gebruiker kan ik in een inputfield de titel van een film invullen, wanneer ik op enter druk worden de films gefilterd op de titel die ik heb ingevuld.
 
 # Design (bonus)🖌️
 
