@@ -1,4 +1,5 @@
-# Winc Academy | Front-end Development
+# Winc Academy | Front-end Development ![](javascript.svg)
+
 
 ## Winc Academy Front-end Class may 2020
 
