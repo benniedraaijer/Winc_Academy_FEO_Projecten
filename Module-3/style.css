@@ -1,0 +1,211 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    z-index: 500;
+    display: grid;
+    position: fixed;
+    height: 100px;
+    background-color: royalblue;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: white;
+}
+
+nav>div {
+    display: grid;
+    font-size: 25px;
+    height: 75px;
+    place-self: center;
+    place-content: center;
+}
+
+.input-container {
+    z-index: 500;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px 0 20px 70px
+}
+
+.input-task {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: royalblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.grid {
+    position: relative;
+    top: 275px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "task-container";
+}
+
+.task-container {
+    display: grid;
+    grid-area: task-container;
+    margin: 25px;
+    gap: 5px;
+}
+
+.rows {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "show""edit";
+    border-radius: 4px;
+    border: 0.5px solid lightgray;
+}
+
+.show {
+    display: grid;
+    grid-area: show;
+    grid-template-columns: 125px 1fr 300px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "date description button";
+}
+
+.date {
+    display: grid;
+    grid-area: date;
+    align-content: center;
+    justify-self: center;
+}
+
+.description {
+    display: grid;
+    grid-area: description;
+    align-content: center;
+}
+
+.buttons {
+    display: grid;
+    grid-area: button;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "button-A button-B button-C";
+    gap: 5px;
+    margin: 5px
+}
+
+.button-A {
+    display: grid;
+    grid-area: button-A;
+    grid-template-areas: "btn-check";
+}
+
+.button-B {
+    display: grid;
+    grid-area: button-B;
+    grid-template-areas: "btn-edit";
+}
+
+.button-C {
+    display: grid;
+    grid-area: button-C;
+    grid-template-areas: "btn-delete";
+}
+
+.btn-check {
+    grid-area: btn-check;
+    height: 40px;
+    background-color: royalblue;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-edit {
+    grid-area: btn-edit;
+    height: 40px;
+    background-color: grey;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-delete {
+    grid-area: btn-delete;
+    width: auto;
+    height: 40px;
+    background-color: orangered;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit {
+    display: none;
+    grid-area: edit;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "edit-description edit-button";
+    margin-bottom: 5px;
+}
+
+.edit-description {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-area: edit-description;
+    margin: 5px;
+    align-content: center;
+}
+
+.edit-button {
+    display: grid;
+    grid-area: edit-button;
+    grid-template-areas: "button-D";
+    gap: 5px;
+    margin: 5px
+}
+
+.button-D {
+    display: grid;
+    grid-area: button-D;
+    grid-template-areas: "btn-save-edit";
+}
+
+.btn-save-edit {
+    grid-area: btn-save-edit;
+    height: 40px;
+    background-color: royalblue;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+}
+
+.edit-input {
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 38px;
+    font-size: 20px;
+}
