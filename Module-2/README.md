@@ -1,9 +1,6 @@
 
 # Winc Academy | Front-end Development
 ## module 2 | [Eindopdracht](https://winc-movie-finder.netlify.app/)
-
-
-
 # ** Intro 💬**
 
 Je gaat een een filmzoeker maken!
