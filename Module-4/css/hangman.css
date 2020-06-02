@@ -1,0 +1,167 @@
+#hangman {
+    z-index: 100;
+    position: absolute;
+    left: 1vw;
+    bottom: 0;
+    width: 60vh;
+    height: 60vh;
+    border: none;  
+}
+
+#hang-bottom {
+    z-index: 100;
+    position: absolute;
+    width: 25%;
+    height: 5%;
+    background: linear-gradient(darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    border-radius: 1px;
+}
+
+#hang-pole {
+    z-index: 100;
+    position: absolute;
+    width: 5%;
+    height: 90%;
+    left: 5%;
+    bottom: 0;
+    background: linear-gradient(90deg, darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
+    border-radius: 1px;
+}
+
+#hang-arm {
+    z-index: 100;
+    position: absolute;
+    left: 5%;
+    width: 30%;
+    height: 4%;
+    background: linear-gradient(darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
+    top: 6%;
+    border-radius: 1px;
+    animation: hang-arm 3s linear infinite;
+}
+
+#rope {
+    z-index: 100;
+    position: absolute;
+    width: 2%;
+    height: 24%;
+    background: linear-gradient(135deg, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold);
+    left: 27%;
+    top: 10%;
+    visibility: hidden;
+}
+
+#rope-2 {
+    z-index: 100;
+    position: absolute;
+    width: 2%;
+    height: 10%;
+    background: linear-gradient(135deg, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold);
+    left: 27%;
+    top: 29%;
+    transform: rotate(-50deg);
+    border-radius: 25%;
+    z-index: 20;
+    visibility: hidden;
+}
+
+#head {
+    z-index: 50;
+    position: absolute;
+    width: 13%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: black;
+    left: 25%;
+    top: 19%;
+    transition: background-color 1s;
+    transform: rotate(20deg);
+    visibility: hidden;
+}
+
+#body {
+    z-index: 100;
+    position: absolute;
+    width: 7%;
+    height: 25%;
+    background-color: black;
+    left: 23%;
+    top: 33%;
+    border-radius: 30%;
+    transition: background-color 1s;
+    transform: rotate(7deg);
+    visibility: hidden;
+}
+
+#arm {
+    z-index: 100;
+    position: absolute;
+    width: 4%;
+    height: 12.5%;
+    background-color: yellow;
+    left: 27%;
+    top: 36%;
+    border-radius: 30%;
+    transition: background-color 1s;
+    transform: rotate(-15deg);
+    visibility: hidden;
+}
+
+#arm-2 {
+    z-index: 100;
+    position: absolute;
+    width: 3%;
+    height: 12%;
+    background-color: yellow;
+    left: 32%;
+    top: 48%;
+    border-radius: 30%;
+    transition: background-color 1s;
+    transform: rotate(-25deg);
+    visibility: hidden;
+}
+
+#leg {
+    z-index: 100;
+    position: absolute;
+    width: 5%;
+    height: 12.5%;
+    background-color: blue;
+    left: 24%;
+    top: 57%;
+    border-radius: 30%;
+    transition: background-color 1s;
+    transform: rotate(-25deg);
+    visibility: hidden;
+}
+
+#leg-2 {
+    z-index: 100;
+    position: absolute;
+    width: 3%;
+    height: 15%;
+    background-color: blue;
+    left: 25%;
+    top: 68%;
+    border-radius: 30%;
+    transition: background-color 1s;
+    transform: rotate(25deg);
+    visibility: hidden;
+}
+
+#foot {
+    z-index: 100;
+    position: absolute;
+    width: 2%;
+    height: 6%;
+    background-color: black;
+    left: 24%;
+    top: 81%;
+    border-radius: 30%;
+    transition: background-color 1s;
+    transform: rotate(-40deg);
+    visibility: hidden;
+}
