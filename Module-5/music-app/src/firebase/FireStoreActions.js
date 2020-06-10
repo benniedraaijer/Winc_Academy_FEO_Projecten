@@ -1,28 +1,19 @@
 import firebase from "../firebase/config/FireBaseConfig";
 let db = [];
 
-
 export const database = async () => {
-await getData()
+  await getData();
+  return db;
+};
 
-
-return db
-
-}
-
-
-
-
-
- const getData = async () => {
-  
+const getData = async () => {
   const FireStore = await firebase
     .firestore()
     .collection("fav-songs")
     .orderBy("song")
     .get();
 
- FireStore.forEach((item) => {
+  FireStore.forEach((item) => {
     db.push({
       artist: item.data().artist,
       song: item.data().song,
@@ -32,17 +23,6 @@ return db
     });
   });
 };
-
-//database()
-
-
-
-
-
-//const database = firebase.firestore();
-//const database = firebase.firestore();
-
-//FireStore();
 
 export const addDocument = async (state) => {
   await firebase
