@@ -76,7 +76,7 @@ export default function MusicGenres() {
   return (
     <>
       <div className="app-titles">
-        <h2>Most Poulair Genres</h2>
+        <h2>Most Populair Genres</h2>
       </div>
       <div id="genre-container">
         <div className="genre-box" id="Rock">
