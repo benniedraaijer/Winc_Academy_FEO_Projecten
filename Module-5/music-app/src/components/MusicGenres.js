@@ -20,7 +20,6 @@ export default function MusicGenres() {
       const rock = await database
         .collection("fav-songs")
         .where("genre", "==", "Rock")
-
         .get();
       const country = await database
         .collection("fav-songs")

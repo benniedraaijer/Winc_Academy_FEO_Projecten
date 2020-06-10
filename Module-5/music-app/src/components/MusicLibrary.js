@@ -9,22 +9,9 @@ export default function MusicLibrary() {
   const [songs, setSongs] = React.useState([]);
 
   React.useEffect(() => {
-    const allSongs = [];
     const fetchData = async () => {
-      const data = await database.collection("fav-songs").orderBy("song").get();
-
-      setSongs(data.docs.map((doc) => doc.data()));
-      data.forEach((item) => {
-        allSongs.push({
-          artist: item.data().artist,
-          song: item.data().song,
-          genre: item.data().genre,
-          rating: item.data().rating,
-          id: item.id,
-        });
-      });
-
-      setSongs(allSongs);
+      let data = await database();
+      setSongs(data);
     };
 
     fetchData();

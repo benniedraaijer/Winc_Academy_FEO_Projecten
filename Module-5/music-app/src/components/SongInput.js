@@ -11,7 +11,6 @@ export default function SongInput() {
   });
 
   const handleChange = (event) => {
-    console.log(DropDown);
     const value = event.target.value;
     setState({
       ...state,
@@ -19,8 +18,10 @@ export default function SongInput() {
     });
   };
 
-  const addNewSong = () => {
-    addDocument(state);
+  const addNewSong = async (event) => {
+    event.preventDefault();
+    await addDocument(state);
+    
   };
 
   return (
@@ -50,6 +51,7 @@ export default function SongInput() {
             onChange={handleChange}
           />
         </div>
+
         <div>
           <input
             id="form-song-input-genre"
