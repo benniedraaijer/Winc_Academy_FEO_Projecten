@@ -1,6 +1,26 @@
+import React from "react";
 import firebase from "../firebase/config/FireBaseConfig";
+//import { MusicContext } from "../contexts/MusicContext";
+import { callingMusicProvider } from "../contexts/MusicContext";
 let db = [];
 
+////// Get Realtime Data From FireBase - Firestore //////
+
+// firebase
+//   .firestore()
+//   .collection("fav-songs")
+//   .orderBy("song")
+//   .onSnapshot((snap) => {
+
+//     const snapcheck = () => {
+//       const snapper = snap.docChanges();
+//     }
+    
+//   });
+
+
+
+////// Get Data From FireBase - Firestore //////
 export const database = async () => {
   await getData();
   return db;
@@ -24,6 +44,7 @@ const getData = async () => {
   });
 };
 
+////// Add Data To FireBase - Firestore //////
 export const addDocument = async (state) => {
   await firebase
     .firestore()
@@ -36,6 +57,7 @@ export const addDocument = async (state) => {
     });
 };
 
+////// Delete Data From FireBase - Firestore //////
 export const deleteDocument = async (id) => {
   await firebase.firestore().collection("fav-songs").doc(id).delete();
 };
