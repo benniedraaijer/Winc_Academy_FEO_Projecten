@@ -1,27 +1,28 @@
 import React from "react";
 import { DropDown } from "./DropDown";
 import { addDocument } from "../firebase/FireStoreActions";
+import { MusicContext } from "../contexts/MusicContext";
 
 export default function SongInput() {
-  const [state, setState] = React.useState({
+  
+  const [inputState, setState] = React.useState({
     song: "",
     artist: "",
     genre: "",
     rating: "",
   });
 
+  const [songs, setSongs] = React.useContext(MusicContext);
+
   const handleChange = (event) => {
     const value = event.target.value;
-    setState({
-      ...state,
-      [event.target.name]: value,
-    });
+    setState({ ...inputState, [event.target.name]: value });
   };
 
-  const addNewSong = async (event) => {
+  const addNewSong = (event) => {
     event.preventDefault();
-    await addDocument(state);
-    
+    setSongs(currentSongs => [...currentSongs, inputState]);
+    addDocument(inputState);
   };
 
   return (
@@ -29,14 +30,15 @@ export default function SongInput() {
       <div className="app-titles">
         <h2>Add a Song</h2>
       </div>
-      <form id="form-song-input">
+      <form id="form-song-input" onSubmit={addNewSong}>
+        
         <div>
           <input
             id="form-song-input-title"
             type="text"
             name="song"
             placeholder="song"
-            value={state.song}
+            value={inputState.song}
             onChange={handleChange}
           />
         </div>
@@ -47,8 +49,9 @@ export default function SongInput() {
             type="text"
             name="artist"
             placeholder="artist"
-            value={state.artist}
+            value={inputState.artist}
             onChange={handleChange}
+            onKeyPress={handleChange}
           />
         </div>
 
@@ -58,8 +61,9 @@ export default function SongInput() {
             type="text"
             name="genre"
             placeholder="genre"
-            value={state.genre}
+            value={inputState.genre}
             onChange={handleChange}
+            onKeyPress={handleChange}
           />
         </div>
 
@@ -67,13 +71,14 @@ export default function SongInput() {
           <DropDown
             id="DropDown-Rating"
             name="rating"
-            value={state.rating}
+            value={inputState.rating}
             onChange={handleChange}
+            onKeyPress={handleChange}
           />
         </div>
 
         <div>
-          <button id="btn-add-song" onClick={addNewSong}>
+          <button id="btn-add-song" /*onClick={addNewSong}*/>
             Add song
           </button>
         </div>
