@@ -1,22 +1,16 @@
 import React from "react";
-import { database, deleteDocument } from "../firebase/FireStoreActions";
+import { deleteDocument } from "../firebase/FireStoreActions";
+import { MusicContext } from "../contexts/MusicContext";
 
 const deleteSong = (event) => {
   deleteDocument(event.target.parentElement.parentElement.id);
 };
 
-export default function MusicLibrary() {
-  const [songs, setSongs] = React.useState([]);
+ export const MusicLibrary = () => {
+   const [songs, setSong] = React.useContext(MusicContext);
 
-  React.useEffect(() => {
-    const fetchData = async () => {
-      let data = await database();
-      setSongs(data);
-    };
 
-    fetchData();
-  }, []);
-
+   
   return (
     <>
       <div className="app-titles">
@@ -49,3 +43,5 @@ export default function MusicLibrary() {
     </>
   );
 }
+
+
