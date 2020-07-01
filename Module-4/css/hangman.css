@@ -1,5 +1,4 @@
 #hangman {
-    z-index: 100;
     position: absolute;
     left: 1vw;
     bottom: 0;
@@ -9,14 +8,14 @@
 }
 
 #hang-bottom {
-    z-index: 100;
+    z-index: 200;
     position: absolute;
     width: 25%;
     height: 5%;
     background: linear-gradient(darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
     bottom: 0;
     left: 0;
-    z-index: 20;
+   
     border-radius: 1px;
 }
 
@@ -64,7 +63,7 @@
     top: 29%;
     transform: rotate(-50deg);
     border-radius: 25%;
-    z-index: 20;
+    
     visibility: hidden;
 }
 
@@ -83,7 +82,7 @@
 }
 
 #body {
-    z-index: 100;
+    z-index: 50;
     position: absolute;
     width: 7%;
     height: 25%;
