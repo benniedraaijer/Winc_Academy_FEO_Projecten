@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
 
-:root {
-  --bgColor: linear-gradient(to bottom, #1976d2, #448aff);
-}
-
 body {
   box-sizing: border-box;
-  font-family: Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin: 0;
   padding: 0;
@@ -16,10 +10,11 @@ body {
   overflow: hidden;
 }
 
-.portrait-block {
+#portrait-block {
+  display: grid;
   visibility: visible;
-  position: absolute;
-  background: var(--bgColor);
+  position: fixed;
+  background: linear-gradient(to bottom, #1976d2, #448aff);
   z-index: 1000;
   top: 0;
   right: 0;
@@ -27,38 +22,36 @@ body {
   bottom: 0;
 }
 
-.portrait-block>div {
+#portrait-block>div {
   visibility: visible;
   z-index: 1001;
   text-align: center;
   place-self: center;
   place-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.turn-device {
+#turn-device {
+  place-self: center;
   visibility: visible;
   z-index: 1001;
   font-family: 'Caesar Dressing',
     cursive;
+  width: 100%;
 }
 
-
 @media (orientation: landscape) and (min-width: 992px) {
-  .portrait-block {
+  #portrait-block {
     visibility: hidden;
   }
 
-  .portrait-block>div {
+  #portrait-block>div {
     visibility: hidden;
   }
 
-  .turn-device {
+  #turn-device {
     visibility: hidden;
-  }
-
-  body {
-    visibility: visible;
-
   }
 
   .game-wrapper {
@@ -115,8 +108,8 @@ body {
   input {
     z-index: 50;
     position: absolute;
-    left: 30%;
-    right: 30%;
+    left: 40%;
+    right: 40%;
     text-align: center;
     box-sizing: border-box;
     padding-left: 10px;
@@ -126,7 +119,7 @@ body {
     color: gold;
     background: none;
     height: 100%;
-    width: 40%;
+    width: 20%;
     transition: 0.3s;
     box-shadow: inset 0 0 0 none;
     outline: none;
@@ -141,9 +134,9 @@ body {
     position: absolute;
     top: 38%;
     height: 6vh;
-    left: 30%;
-    right: 30%;
-    width: 40%;
+    left: 40%;
+    right: 40%;
+    width: 20%;
   }
 
   .guess {
@@ -156,13 +149,12 @@ body {
     color: gold;
     background: none;
     height: 100%;
-    width: 25%;
+    width: 45%;
     margin-right: 5%;
     transition: 0.3s;
     box-shadow: inset 0 0 0 none;
     cursor: pointer;
     outline: none;
-    margin-left: 22.5%;
   }
 
   .guess:hover {
@@ -185,8 +177,8 @@ body {
     color: gold;
     background: none;
     height: 100%;
-    width: 25%;
-    margin-left: 52.5%;
+    width: 45%;
+    margin-left: 55%;
     transition: 0.3s;
     box-shadow: inset 0 0 0 none;
     cursor: pointer;
@@ -201,34 +193,7 @@ body {
     width: 100%;
   }
 
-  footer {
-    z-index: 1;
-    visibility: visible;
-    position: absolute;
-    display: grid;
-    bottom: 0;
-    padding: 5px 0 5px 0;
-    background: #34a853;
-    height: 10vh;
-    width: 100vw;
-    margin: 0;
-    border: none
-  }
 
-  footer>div {
-    z-index: 1;
-    text-align: center;
-    place-self: center;
-    place-content: center;
-    margin: 0;
-    padding: 0
-  }
-
-  .about {
-    z-index: 1;
-    font-size: 15px;
-    margin: 0;
-  }
 
   .win,
   .lose {
@@ -343,8 +308,38 @@ body {
     position: absolute;
   }
 
-
   .game-title {
     font-size: 60px;
   }
+
+  footer {
+    z-index: 1;
+    position: absolute;
+    display: grid;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    background: #34a853;
+    height: 10vh;
+    width: 100vw;
+    margin: 0;
+    border: none
+  }
+
+  footer>div {
+    z-index: 1;
+    text-align: center;
+    place-self: center;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about {
+    z-index: 1;
+    font-size: 15px;
+    margin: 0;
+  }
+
+
+
 }
