@@ -4,22 +4,6 @@ import firebase from "../firebase/config/FireBaseConfig";
 import { callingMusicProvider } from "../contexts/MusicContext";
 let db = [];
 
-////// Get Realtime Data From FireBase - Firestore //////
-
-// firebase
-//   .firestore()
-//   .collection("fav-songs")
-//   .orderBy("song")
-//   .onSnapshot((snap) => {
-
-//     const snapcheck = () => {
-//       const snapper = snap.docChanges();
-//     }
-    
-//   });
-
-
-
 ////// Get Data From FireBase - Firestore //////
 export const database = async () => {
   await getData();
