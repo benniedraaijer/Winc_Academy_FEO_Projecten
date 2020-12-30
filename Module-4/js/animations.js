@@ -38,7 +38,8 @@ const animateFunctions = {
   },
 
   showInputAndButtons: function () {
-   document.querySelector("#current-word-wrapper").style.visibility = "visible";
+    document.querySelector("#current-word-wrapper").style.visibility =
+      "visible";
   },
 };
 

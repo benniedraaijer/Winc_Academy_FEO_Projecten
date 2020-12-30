@@ -107,7 +107,7 @@ let gameOver;
 let tries = 0;
 let givenValue;
 const functions = {
-  assignWinningWord: (list) => {
+  assignWinningWord: list => {
     const index = Math.floor(Math.random() * list.length);
     word = list[index].split("");
     return list[index].split("");
@@ -159,7 +159,7 @@ const functions = {
   },
 
   filterGuessedLetters: (word, inputs) => {
-    const wrongLetters = inputs.filter((letter) => {
+    const wrongLetters = inputs.filter(letter => {
       return !word.includes(letter);
     });
     // Comment out for jest.
@@ -170,7 +170,7 @@ const functions = {
   },
 
   checkWinCondition: (word, inputs) => {
-    let remaining = word.filter((letter) => {
+    let remaining = word.filter(letter => {
       return !inputs.includes(letter);
     });
     // if the array is empty return true
@@ -182,7 +182,7 @@ const functions = {
       return false;
     }
   },
-  checkLoseCondition: (tries) => {
+  checkLoseCondition: tries => {
     if (tries === 5) {
       f.showLoseScreen(); // comment out for jest
       gameOver = true;
@@ -198,7 +198,7 @@ const functions = {
 const f = functions;
 
 const UpdateDomWinningWord = (word, inputLetterWords) => {
-  const display = word.map((letter) => {
+  const display = word.map(letter => {
     if (inputLetterWords.includes(letter)) {
       return letter;
     } else {
@@ -210,7 +210,7 @@ const UpdateDomWinningWord = (word, inputLetterWords) => {
 
 //Remove letters that are in the winning word from the array . push left over to dom
 const filterGuessedLetters = (word, inputs) => {
-  const wrongLetters = inputs.filter((letter) => {
+  const wrongLetters = inputs.filter(letter => {
     return !word.includes(letter);
   });
   document.querySelector(".guessed_letters").innerHTML = wrongLetters.join(" ");

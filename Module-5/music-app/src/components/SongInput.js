@@ -4,7 +4,6 @@ import { addDocument } from "../firebase/FireStoreActions";
 import { MusicContext } from "../contexts/MusicContext";
 
 export default function SongInput() {
-  
   const [inputState, setState] = React.useState({
     song: "",
     artist: "",
@@ -14,12 +13,12 @@ export default function SongInput() {
 
   const [songs, setSongs] = React.useContext(MusicContext);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const value = event.target.value;
     setState({ ...inputState, [event.target.name]: value });
   };
 
-  const addNewSong = (event) => {
+  const addNewSong = event => {
     event.preventDefault();
     setSongs(currentSongs => [...currentSongs, inputState]);
     addDocument(inputState);
@@ -27,17 +26,16 @@ export default function SongInput() {
 
   return (
     <>
-      <div className="app-titles">
+      <div className='app-titles'>
         <h2>Add a Song</h2>
       </div>
-      <form id="form-song-input" onSubmit={addNewSong}>
-        
+      <form id='form-song-input' onSubmit={addNewSong}>
         <div>
           <input
-            id="form-song-input-title"
-            type="text"
-            name="song"
-            placeholder="song"
+            id='form-song-input-title'
+            type='text'
+            name='song'
+            placeholder='song'
             value={inputState.song}
             onChange={handleChange}
           />
@@ -45,10 +43,10 @@ export default function SongInput() {
 
         <div>
           <input
-            id="form-song-input-artist"
-            type="text"
-            name="artist"
-            placeholder="artist"
+            id='form-song-input-artist'
+            type='text'
+            name='artist'
+            placeholder='artist'
             value={inputState.artist}
             onChange={handleChange}
             onKeyPress={handleChange}
@@ -57,10 +55,10 @@ export default function SongInput() {
 
         <div>
           <input
-            id="form-song-input-genre"
-            type="text"
-            name="genre"
-            placeholder="genre"
+            id='form-song-input-genre'
+            type='text'
+            name='genre'
+            placeholder='genre'
             value={inputState.genre}
             onChange={handleChange}
             onKeyPress={handleChange}
@@ -69,8 +67,8 @@ export default function SongInput() {
 
         <div>
           <DropDown
-            id="DropDown-Rating"
-            name="rating"
+            id='DropDown-Rating'
+            name='rating'
             value={inputState.rating}
             onChange={handleChange}
             onKeyPress={handleChange}
@@ -78,9 +76,7 @@ export default function SongInput() {
         </div>
 
         <div>
-          <button id="btn-add-song" /*onClick={addNewSong}*/>
-            Add song
-          </button>
+          <button id='btn-add-song' /*onClick={addNewSong}*/>Add song</button>
         </div>
       </form>
     </>

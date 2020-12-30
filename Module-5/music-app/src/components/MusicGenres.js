@@ -58,16 +58,16 @@ export default function MusicGenres() {
         .where("genre", "==", "Punk")
         .get();
 
-      setRock(rock.docs.map((doc) => doc.data()));
-      setCountry(country.docs.map((doc) => doc.data()));
-      setPop(pop.docs.map((doc) => doc.data()));
-      setNL(nl.docs.map((doc) => doc.data()));
-      setHiphop(hiphop.docs.map((doc) => doc.data()));
-      setSoul(soul.docs.map((doc) => doc.data()));
-      setJazz(jazz.docs.map((doc) => doc.data()));
-      setBlues(blues.docs.map((doc) => doc.data()));
-      setMetal(metal.docs.map((doc) => doc.data()));
-      setPunk(punk.docs.map((doc) => doc.data()));
+      setRock(rock.docs.map(doc => doc.data()));
+      setCountry(country.docs.map(doc => doc.data()));
+      setPop(pop.docs.map(doc => doc.data()));
+      setNL(nl.docs.map(doc => doc.data()));
+      setHiphop(hiphop.docs.map(doc => doc.data()));
+      setSoul(soul.docs.map(doc => doc.data()));
+      setJazz(jazz.docs.map(doc => doc.data()));
+      setBlues(blues.docs.map(doc => doc.data()));
+      setMetal(metal.docs.map(doc => doc.data()));
+      setPunk(punk.docs.map(doc => doc.data()));
     };
 
     fetchData();
@@ -75,127 +75,117 @@ export default function MusicGenres() {
 
   return (
     <>
-      <div className="app-titles">
+      <div className='app-titles'>
         <h2>Most Populair Genres</h2>
       </div>
-      <div id="genre-container">
-        <div className="genre-box" id="Rock">
+      <div id='genre-container'>
+        <div className='genre-box' id='Rock'>
           Rock
-          {rock.map((song) => (
+          {rock.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="Country">
+        <div className='genre-box' id='Country'>
           Country
-          {country.map((song) => (
+          {country.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="Pop">
+        <div className='genre-box' id='Pop'>
           Pop
-          {pop.map((song) => (
+          {pop.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="NL">
+        <div className='genre-box' id='NL'>
           Nederlands
-          {nl.map((song) => (
+          {nl.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="genre-5">
+        <div className='genre-box' id='genre-5'>
           Hip Hop
-          {hiphop.map((song) => (
+          {hiphop.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="genre-6">
+        <div className='genre-box' id='genre-6'>
           Soul
-          {soul.map((song) => (
+          {soul.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="genre-7">
+        <div className='genre-box' id='genre-7'>
           Jazz
-          {jazz.map((song) => (
+          {jazz.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="genre-8">
+        <div className='genre-box' id='genre-8'>
           Blues
-          {blues.map((song) => (
+          {blues.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="genre-9">
+        <div className='genre-box' id='genre-9'>
           Metal
-          {metal.map((song) => (
+          {metal.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>
-        <div className="genre-box" id="genre-10">
+        <div className='genre-box' id='genre-10'>
           Punk
-          {punk.map((song) => (
+          {punk.map(song => (
             <div
-              className="genre-row"
+              className='genre-row'
               id={song.id}
-              key={song.song + new Date()}
-            >
-              <p className="song-title">{song.song + " - " + song.artist}</p>
+              key={song.song + new Date()}>
+              <p className='song-title'>{song.song + " - " + song.artist}</p>
             </div>
           ))}
         </div>

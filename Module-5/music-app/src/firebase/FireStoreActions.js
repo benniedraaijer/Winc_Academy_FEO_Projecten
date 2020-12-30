@@ -17,7 +17,7 @@ const getData = async () => {
     .orderBy("song")
     .get();
 
-  FireStore.forEach((item) => {
+  FireStore.forEach(item => {
     db.push({
       artist: item.data().artist,
       song: item.data().song,
@@ -29,7 +29,7 @@ const getData = async () => {
 };
 
 ////// Add Data To FireBase - Firestore //////
-export const addDocument = async (state) => {
+export const addDocument = async state => {
   await firebase
     .firestore()
     .collection("fav-songs")
@@ -42,6 +42,6 @@ export const addDocument = async (state) => {
 };
 
 ////// Delete Data From FireBase - Firestore //////
-export const deleteDocument = async (id) => {
+export const deleteDocument = async id => {
   await firebase.firestore().collection("fav-songs").doc(id).delete();
 };

@@ -5,7 +5,7 @@ import { database } from "../firebase/FireStoreActions";
 export const MusicContext = React.createContext();
 
 // Provider
-export const MusicProvider = (props) => {
+export const MusicProvider = props => {
   const [songs, setSongs] = React.useState([]);
 
   const getData = async () => {
