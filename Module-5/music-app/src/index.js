@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./css/index.css";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './css/index.css';
+import App from './App';
 // import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 // import thunk from "redux-thunk";
 // import { reduxFirestore, getFirestore } from "redux-firestore";
@@ -26,7 +26,7 @@ import App from "./App";
 
 ReactDOM.render(
   //<Provider store={store}>
-    <App />
+  <App />,
   //</Provider>,
- , document.getElementById("root")
+  document.getElementById('root')
 );

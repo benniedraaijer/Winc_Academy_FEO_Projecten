@@ -1,26 +1,26 @@
-import React from "react";
-import { DropDown } from "./DropDown";
-import { addDocument } from "../firebase/FireStoreActions";
-import { MusicContext } from "../contexts/MusicContext";
+import React from 'react';
+import { DropDown } from './DropDown';
+import { addDocument } from '../firebase/FireStoreActions';
+import { MusicContext } from '../contexts/MusicContext';
 
 export default function SongInput() {
   const [inputState, setState] = React.useState({
-    song: "",
-    artist: "",
-    genre: "",
-    rating: "",
+    song: '',
+    artist: '',
+    genre: '',
+    rating: '',
   });
 
   const [songs, setSongs] = React.useContext(MusicContext);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const value = event.target.value;
     setState({ ...inputState, [event.target.name]: value });
   };
 
-  const addNewSong = event => {
+  const addNewSong = (event) => {
     event.preventDefault();
-    setSongs(currentSongs => [...currentSongs, inputState]);
+    setSongs((currentSongs) => [...currentSongs, inputState]);
     addDocument(inputState);
   };
 
@@ -31,14 +31,7 @@ export default function SongInput() {
       </div>
       <form id='form-song-input' onSubmit={addNewSong}>
         <div>
-          <input
-            id='form-song-input-title'
-            type='text'
-            name='song'
-            placeholder='song'
-            value={inputState.song}
-            onChange={handleChange}
-          />
+          <input id='form-song-input-title' type='text' name='song' placeholder='song' value={inputState.song} onChange={handleChange} />
         </div>
 
         <div>
@@ -66,13 +59,7 @@ export default function SongInput() {
         </div>
 
         <div>
-          <DropDown
-            id='DropDown-Rating'
-            name='rating'
-            value={inputState.rating}
-            onChange={handleChange}
-            onKeyPress={handleChange}
-          />
+          <DropDown id='DropDown-Rating' name='rating' value={inputState.rating} onChange={handleChange} onKeyPress={handleChange} />
         </div>
 
         <div>

@@ -12,16 +12,7 @@
   position: absolute;
   width: 25%;
   height: 5%;
-  background: linear-gradient(
-    darkorange,
-    brown,
-    darkorange,
-    brown,
-    darkorange,
-    brown,
-    darkorange,
-    brown
-  );
+  background: linear-gradient(darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
   bottom: 0;
   left: 0;
 
@@ -35,17 +26,7 @@
   height: 90%;
   left: 5%;
   bottom: 0;
-  background: linear-gradient(
-    90deg,
-    darkorange,
-    brown,
-    darkorange,
-    brown,
-    darkorange,
-    brown,
-    darkorange,
-    brown
-  );
+  background: linear-gradient(90deg, darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
   border-radius: 1px;
 }
 
@@ -55,16 +36,7 @@
   left: 5%;
   width: 30%;
   height: 4%;
-  background: linear-gradient(
-    darkorange,
-    brown,
-    darkorange,
-    brown,
-    darkorange,
-    brown,
-    darkorange,
-    brown
-  );
+  background: linear-gradient(darkorange, brown, darkorange, brown, darkorange, brown, darkorange, brown);
   top: 6%;
   border-radius: 1px;
   animation: hang-arm 3s linear infinite;
@@ -75,21 +47,7 @@
   position: absolute;
   width: 2%;
   height: 24%;
-  background: linear-gradient(
-    135deg,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold
-  );
+  background: linear-gradient(135deg, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold);
   left: 27%;
   top: 10%;
   visibility: hidden;
@@ -100,21 +58,7 @@
   position: absolute;
   width: 2%;
   height: 10%;
-  background: linear-gradient(
-    135deg,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold,
-    yellow,
-    gold
-  );
+  background: linear-gradient(135deg, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold, yellow, gold);
   left: 27%;
   top: 29%;
   transform: rotate(-50deg);

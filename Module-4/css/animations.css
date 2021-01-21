@@ -19,14 +19,14 @@
 
 .cloud::before {
   display: block;
-  content: "";
+  content: '';
   top: -20%;
   left: 45%;
 }
 
 .cloud::after {
   display: block;
-  content: "";
+  content: '';
   top: 0%;
   left: 100%;
 }
@@ -84,7 +84,7 @@
 }
 
 .bushes-1::before {
-  content: "";
+  content: '';
   display: block;
   background-color: var(--bush-1);
   height: 25vw;
@@ -104,7 +104,7 @@
 }
 
 .bushes-2::before {
-  content: "";
+  content: '';
   display: block;
   background-color: var(--bush-2);
   height: 27vw;

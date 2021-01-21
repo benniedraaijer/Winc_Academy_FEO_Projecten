@@ -1,11 +1,11 @@
-import React from "react";
-import { database } from "../firebase/FireStoreActions";
+import React from 'react';
+import { database } from '../firebase/FireStoreActions';
 
 // Create Context
 export const MusicContext = React.createContext();
 
 // Provider
-export const MusicProvider = props => {
+export const MusicProvider = (props) => {
   const [songs, setSongs] = React.useState([]);
 
   const getData = async () => {
@@ -15,9 +15,5 @@ export const MusicProvider = props => {
 
   getData();
 
-  return (
-    <MusicContext.Provider value={[songs, setSongs]}>
-      {props.children}
-    </MusicContext.Provider>
-  );
+  return <MusicContext.Provider value={[songs, setSongs]}>{props.children}</MusicContext.Provider>;
 };

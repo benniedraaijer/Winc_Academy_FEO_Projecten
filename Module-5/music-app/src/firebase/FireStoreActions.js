@@ -1,7 +1,7 @@
-import React from "react";
-import firebase from "../firebase/config/FireBaseConfig";
+import React from 'react';
+import firebase from '../firebase/config/FireBaseConfig';
 //import { MusicContext } from "../contexts/MusicContext";
-import { callingMusicProvider } from "../contexts/MusicContext";
+import { callingMusicProvider } from '../contexts/MusicContext';
 let db = [];
 
 ////// Get Data From FireBase - Firestore //////
@@ -11,13 +11,9 @@ export const database = async () => {
 };
 
 const getData = async () => {
-  const FireStore = await firebase
-    .firestore()
-    .collection("fav-songs")
-    .orderBy("song")
-    .get();
+  const FireStore = await firebase.firestore().collection('fav-songs').orderBy('song').get();
 
-  FireStore.forEach(item => {
+  FireStore.forEach((item) => {
     db.push({
       artist: item.data().artist,
       song: item.data().song,
@@ -29,19 +25,19 @@ const getData = async () => {
 };
 
 ////// Add Data To FireBase - Firestore //////
-export const addDocument = async state => {
+export const addDocument = async (state) => {
   await firebase
     .firestore()
-    .collection("fav-songs")
+    .collection('fav-songs')
     .add({
       song: state.song,
       artist: state.artist,
       genre: state.genre,
-      rating: document.querySelector("#dropdown-song-rating").value,
+      rating: document.querySelector('#dropdown-song-rating').value,
     });
 };
 
 ////// Delete Data From FireBase - Firestore //////
-export const deleteDocument = async id => {
-  await firebase.firestore().collection("fav-songs").doc(id).delete();
+export const deleteDocument = async (id) => {
+  await firebase.firestore().collection('fav-songs').doc(id).delete();
 };

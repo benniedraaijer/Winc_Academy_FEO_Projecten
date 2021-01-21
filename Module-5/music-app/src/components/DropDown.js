@@ -1,17 +1,15 @@
-import React from "react";
+import React from 'react';
 //import ratingSelection from './SongInput'
 
-const ratingOnClick = event => {
-  document.querySelector("#dropdown-song-rating-button").textContent =
-    event.target.title;
-  document.querySelector("#dropdown-song-rating").value = event.target.title;
+const ratingOnClick = (event) => {
+  document.querySelector('#dropdown-song-rating-button').textContent = event.target.title;
+  document.querySelector('#dropdown-song-rating').value = event.target.title;
   event.preventDefault();
 
-  console.log(document.querySelector("#dropdown-song-rating").value);
+  console.log(document.querySelector('#dropdown-song-rating').value);
 };
 
-export const passingRating = () =>
-  document.querySelector("#dropdown-song-rating").value;
+export const passingRating = () => document.querySelector('#dropdown-song-rating').value;
 
 export const DropDown = () => {
   return (
